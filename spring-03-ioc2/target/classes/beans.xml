@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="User" class="com.kuang.pojo.User" name="user,u1">
+<!--        <constructor-arg index="0" value="asdasd"></constructor-arg> 有参构造通过index来调用-->
+<!--        <constructor-arg type="java.lang.String" value="swdasda"></constructor-arg> 有参构造通过type来调用-->
+        <constructor-arg name="age" value="12"></constructor-arg>
+        <constructor-arg name="name" value="ykz"></constructor-arg>
+<!--        <property name="name" value="ykz"></property>-->
+    </bean>
+    <bean id="UserT" class="com.kuang.pojo.UserT">
+
+    </bean>
+    <alias name="User" alias="userNew"></alias> <!--别名-->
+</beans>

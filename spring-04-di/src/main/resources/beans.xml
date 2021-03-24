@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.kuang.pojo.Address"></bean>
+
+    <bean id="student" class="com.kuang.pojo.Student">
+        <property name="name" value="ykz"></property>
+        <property name="address" ref="address"></property>
+        <property name="books">
+            <array>
+                <value>book1</value>
+                <value>book2</value>
+                <value>book3</value>
+            </array>
+        </property>
+        <property name="hobby">
+            <list>
+                <value>hobby1</value>
+                <value>hobby2</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="ykz0826" value="123456"></entry>
+            </map>
+        </property>
+        <property name="game">
+            <set>
+                <value>game1</value>
+                <value>game2</value>
+                <value>game3</value>
+            </set>
+        </property>
+        <property name="wifi">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="num">123123</prop>
+                <prop key="name">ykz</prop>
+                <prop key="gender">male</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
